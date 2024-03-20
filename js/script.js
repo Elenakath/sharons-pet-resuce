@@ -17,7 +17,9 @@ const createPet = function (name, species) {
                 console.log("Too tired to play.");
                this.sleep();
             } else {
-                    console.log(`Yay! ${this.name} loves to play!`);
+                    console.log(
+                        `Yay! ${this.name} loves to play!`
+                        );
                     this.isTired += 1;
              }
             }
@@ -46,7 +48,7 @@ const createPet = function (name, species) {
     const showPets = function(petArray) {
         pets.innerHTML = "";
         
-        for (let key of petArray) {
+        for (let pet of petArray) {
             let status = "ready to play!"
             if (pet.isTired >= 7) {
                 status = "sleeping.";
